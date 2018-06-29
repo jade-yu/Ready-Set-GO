@@ -30,7 +30,7 @@
         <activity android:name=".EarthquakeActivity" />
         <activity android:name=".FireActivity" />
         <activity android:name=".TyphoonActivity" />
-        <activity android:name=".FloodActivity"></activity
+        <activity android:name=".FloodActivity" />
         <activity android:name=".GoBagActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".SOSMessageActivity" />
