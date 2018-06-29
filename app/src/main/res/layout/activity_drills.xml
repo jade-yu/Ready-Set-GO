@@ -1,9 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DrillsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drills"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:background="#052c50"
+            android:fontFamily="@font/ubuntu"
+            android:padding="11dp"
+            android:elevation="5dp"/>
+    </LinearLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/GridLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:orientation="horizontal"
+        tools:context=".GridLayoutActivity">
+
+        <LinearLayout
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/ib_typhoon"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/typhoon"
+                android:cropToPadding="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Typhoon"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/ubuntu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/ib_flood"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/flood"
+                android:cropToPadding="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Flood"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/ubuntu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/ib_earthquake"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/earthquake"
+                android:cropToPadding="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Earthquake"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/ubuntu"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/ib_fire"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/fire"
+                android:cropToPadding="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fire"
+                android:textSize="24dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/ubuntu"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+</RelativeLayout>
