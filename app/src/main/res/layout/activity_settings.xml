@@ -121,5 +121,5 @@
         android:text="SOS"
         android:textColor="#ffffff"
         android:layout_margin="15dp" />
-
+  
 </RelativeLayout>
