@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#052c50">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:fontFamily=""
+                android:padding="11dp"
+                android:elevation="5dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Select the people you want to set as your default SOS contacts and customise your SOS message."/>
+
+            <RelativeLayout
+                android:id="@+id/rl_contacts"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="#f18b00"
+                android:padding="15dp"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/iv_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/userwhite"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contacts"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="30dp"/>
+
+                <TextView
+                    android:id="@+id/tv_selected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 selected"
+                    android:textSize="12sp"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_message"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="#f18b00"
+                android:padding="15dp"
+                android:layout_marginTop="40dp">
+
+                <ImageView
+                    android:id="@+id/iv_message"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/message"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SOS Message"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="30dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
