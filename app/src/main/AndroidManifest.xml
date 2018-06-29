@@ -33,7 +33,7 @@
         <activity android:name=".FloodActivity"></activity
         <activity android:name=".GoBagActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".SOSMessageActivity"></activity>
+        <activity android:name=".SOSMessageActivity" />
     </application>
 
 </manifest>
