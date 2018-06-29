@@ -23,6 +23,7 @@ public class FirstAidActivity extends AppCompatActivity {
         ibCPR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(v.getContext(), CPRActivity.class);
                 startActivity(i);
             }
