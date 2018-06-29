@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".TyphoonActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +20,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Flood Drill"
+                android:text="Typhoon Drill"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textColor="#ffffff"
@@ -44,7 +46,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Before a Flood:"/>
+                android:text="Before a Typhoon:"/>
 
         </LinearLayout>
 
@@ -65,7 +67,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Avoid building in a floodplain."/>
+                android:text="Store an adequate supply of food and clean water. Prepare foods that need not be cooked."/>
 
         </LinearLayout>
 
@@ -86,7 +88,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Construct barriers (levees, beams, floodwalls) to stop floodwater from entering your home."/>
+                android:text="Keep flashlights, candles and battery-powered radios within easy reach."/>
 
         </LinearLayout>
 
@@ -107,7 +109,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Seal walls in basements with waterproofing compounds to avoid seepage."/>
+                android:text="Examine your house and repair its unstable parts."/>
 
         </LinearLayout>
 
@@ -128,7 +130,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If a flood is likely in your area, listen to the radio or television for information."/>
+                android:text="Always keep yourself updated with the latest weather report."/>
 
         </LinearLayout>
 
@@ -149,7 +151,70 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Know the difference between a flood watch and a flood warning. A watch means flooding is possible. A warning means flooding is occurring or will occur soon."/>
+                android:text="Harvest crops that can be yielded already."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Secure domesticated animals in a safe place."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For fisher folks, place boats in a safe area."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Should you need to evacuate, bring clothes, first aid kit, candles/flashlight, battery-powered radio, food, etc"/>
 
         </LinearLayout>
 
@@ -168,7 +233,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="When Flood is Imminent:"/>
+                android:text="During a Typhoon:"/>
 
         </LinearLayout>
 
@@ -189,7 +254,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Be prepared! Pack a bag with important items in case you need to evacuate. Don't forget to include needed medications."/>
+                android:text="Stay inside the house."/>
 
         </LinearLayout>
 
@@ -210,7 +275,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If advised to evacuate your home, do so immediately."/>
+                android:text="Always keep yourself updated with the latest weather report."/>
 
         </LinearLayout>
 
@@ -231,7 +296,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If there is any possibility of a flash flood, move immediately to higher ground."/>
+                android:text="If safe drinking water is not available, boil water for at least 20 minutes. Place it in a container with cover."/>
 
         </LinearLayout>
 
@@ -252,7 +317,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If possible, bring in outdoor furniture and move essential items to an upper floor."/>
+                android:text="Keep an eye on lighted candles or gas lamps."/>
 
         </LinearLayout>
 
@@ -273,7 +338,113 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Turn off utilities at the main switches or valves if instructed to do so. Disconnect electrical appliances."/>
+                android:text="Do not wade through floodwaters to avoid being electrocuted and contracting diseases."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If there is a need to move to an evacuation center, follow these reminders."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evacuate calmly."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close the windows and turn off the main power switch.
+"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Put important appliances and belongings in a high ground."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avoid the way leading to the river."/>
 
         </LinearLayout>
 
@@ -292,7 +463,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="During a Flood:"/>
+                android:text="After a Typhoon:"/>
 
         </LinearLayout>
 
@@ -313,7 +484,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not walk through moving water. As little as 6 inches (15 centimeters) of moving water can make you fall."/>
+                android:text="If your house was destroyed, make sure that it is already safe and stable when you enter."/>
 
         </LinearLayout>
 
@@ -334,7 +505,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If you have to walk in water, wherever possible, walk where the water is not moving. Use a stick to check the firmness of the ground in front of you."/>
+                android:text="Beware of dangerous animals such as snakes that may have entered your house."/>
 
         </LinearLayout>
 
@@ -355,7 +526,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not drive into flooded areas. If floodwaters rise around your car, abandon the car and move to higher ground if you can do so safely."/>
+                android:text="Watch out for live wires or outlet immersed in water."/>
 
         </LinearLayout>
 
@@ -376,26 +547,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not touch electrical equipment if you are wet or standing in water."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "15dp">
-
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="After a Flood:"/>
+                android:text="Report damaged electrical cables and fallen electric posts to the authorities."/>
 
         </LinearLayout>
 
@@ -416,28 +568,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Listen for news reports to learn whether the community's water supply is safe to drink."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Avoid floodwaters; water may be contaminated by oil, gasoline, or raw sewage. Water may also be electrically charged from underground or downed power lines."/>
+                android:text="Do not let water accumulate in tires, cans or pots to avoid creating a favorable condition for mosquito."/>
 
         </LinearLayout>
 

@@ -24,6 +24,14 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ContactsChecklistActivity" />
         <activity android:name=".HotlinesChecklistActivity" />
+        <activity android:name=".CPRActivity" />
+        <activity android:name=".BleedActivity" />
+        <activity android:name=".BurnActivity" />
+        <activity android:name=".UnconsciousActivity" />
+        <activity android:name=".EarthquakeActivity" />
+        <activity android:name=".FireActivity" />
+        <activity android:name=".TyphoonActivity" />
+        <activity android:name=".FloodActivity"></activity>
     </application>
 
 </manifest>

@@ -3,7 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".EarthquakeActivity">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Typhoon Drill"
+                android:text="Earthquake Drill"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textColor="#ffffff"
@@ -44,7 +47,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Before a Typhoon:"/>
+                android:text="If You Are Indoors During an Earthquake:"/>
 
         </LinearLayout>
 
@@ -65,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Store an adequate supply of food and clean water. Prepare foods that need not be cooked."/>
+                android:text="DROP to the ground; take COVER by getting under a sturdy table or other piece of furniture."/>
 
         </LinearLayout>
 
@@ -86,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Keep flashlights, candles and battery-powered radios within easy reach."/>
+                android:text="HOLD ON until the shaking stops."/>
 
         </LinearLayout>
 
@@ -107,7 +110,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Examine your house and repair its unstable parts."/>
+                android:text=" If there isn’t a table or desk near you, cover your face and head with your arms and crouch in an inside corner of the building."/>
 
         </LinearLayout>
 
@@ -128,7 +131,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Always keep yourself updated with the latest weather report."/>
+                android:text="Stay away from glass, windows, outside doors and walls, and anything that could fall, such as lighting fixtures or furniture."/>
 
         </LinearLayout>
 
@@ -149,7 +152,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Harvest crops that can be yielded already."/>
+                android:text="Stay in bed if you are there when the earthquake strikes."/>
 
         </LinearLayout>
 
@@ -170,7 +173,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Secure domesticated animals in a safe place."/>
+                android:text=" Hold on and protect your head with a pillow, unless you are under a heavy light fixture that could fall."/>
 
         </LinearLayout>
 
@@ -191,7 +194,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="For fisher folks, place boats in a safe area."/>
+                android:text="In that case, move to the nearest safe place."/>
 
         </LinearLayout>
 
@@ -212,7 +215,70 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Should you need to evacuate, bring clothes, first aid kit, candles/flashlight, battery-powered radio, food, etc"/>
+                android:text="Do not use a doorway except if you know it is a strongly supported, load-bearing doorway and it is close to you."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stay inside until the shaking stops and it is safe to go outside. Do not exit a building during the shaking"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DO NOT use the elevators."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be aware that the electricity may go out or the sprinkler systems or fire alarms may turn on."/>
 
         </LinearLayout>
 
@@ -231,7 +297,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="During a Typhoon:"/>
+                android:text="If You Are Outdoors During an Earthquake:"/>
 
         </LinearLayout>
 
@@ -252,7 +318,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stay inside the house."/>
+                android:text="Stay there."/>
 
         </LinearLayout>
 
@@ -273,7 +339,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Always keep yourself updated with the latest weather report."/>
+                android:text="Move away from buildings, streetlights, and utility wires. "/>
 
         </LinearLayout>
 
@@ -294,155 +360,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If safe drinking water is not available, boil water for at least 20 minutes. Place it in a container with cover."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Keep an eye on lighted candles or gas lamps."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Do not wade through floodwaters to avoid being electrocuted and contracting diseases."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="If there is a need to move to an evacuation center, follow these reminders."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Evacuate calmly."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Close the windows and turn off the main power switch.
-"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Put important appliances and belongings in a high ground."/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding = "10dp"
-            android:layout_marginLeft="28dp">
-
-            <ImageView
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginRight="20dp"
-                android:baselineAlignBottom="true"
-                android:background="@drawable/bullet"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Avoid the way leading to the river."/>
+                android:text="Once in the open, stay there until the shaking stops. The greatest danger exists directly outside buildings, at exits and alongside exterior walls."/>
 
         </LinearLayout>
 
@@ -461,7 +379,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="After a Typhoon:"/>
+                android:text="If You Are in a Moving Vehicle During an Earthquake:"/>
 
         </LinearLayout>
 
@@ -482,7 +400,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="If your house was destroyed, make sure that it is already safe and stable when you enter."/>
+                android:text="Do not drive into flooded areas. If floodwaters rise around your car, abandon the car and move to higher ground if you can do so safely."/>
 
         </LinearLayout>
 
@@ -503,7 +421,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Beware of dangerous animals such as snakes that may have entered your house."/>
+                android:text="Proceed cautiously once the earthquake has stopped. Avoid roads, bridges, or ramps that might have been damaged by the earthquake."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "15dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If You Are Under Debris:"/>
 
         </LinearLayout>
 
@@ -524,7 +461,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Watch out for live wires or outlet immersed in water."/>
+                android:text="Do not light a match."/>
 
         </LinearLayout>
 
@@ -545,7 +482,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Report damaged electrical cables and fallen electric posts to the authorities."/>
+                android:text="Do not move around or kick up dust."/>
 
         </LinearLayout>
 
@@ -566,7 +503,28 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Do not let water accumulate in tires, cans or pots to avoid creating a favorable condition for mosquito."/>
+                android:text="Cover your mouth with a handkerchief or clothing."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding = "10dp"
+            android:layout_marginLeft="28dp">
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="20dp"
+                android:baselineAlignBottom="true"
+                android:background="@drawable/bullet"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap on a pipe or wall so rescuers can locate you. Use a whistle if one is available. Shout only as a last resort. Shouting can cause you to inhale dangerous amounts of dust."/>
 
         </LinearLayout>
 

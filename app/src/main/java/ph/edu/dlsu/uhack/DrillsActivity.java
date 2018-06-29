@@ -22,28 +22,33 @@ public class DrillsActivity extends AppCompatActivity {
         ibTyphoon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.typhoon_screen);
+                Intent i = new Intent(v.getContext(), TyphoonActivity.class);
+                startActivity(i);
             }
         });
 
         ibFlood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.flood_screen);
+                Intent i = new Intent(v.getContext(), FloodActivity.class);
+                startActivity(i);
             }
         });
 
         ibEarthquake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.earthquake_screen);
+                Intent i = new Intent(v.getContext(), EarthquakeActivity.class);
+                startActivity(i);
             }
         });
 
         ibFire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.fire_screen);
+                Intent i = new Intent(v.getContext(), FireActivity.class);
+                startActivity(i);
+
             }
         });
     }
