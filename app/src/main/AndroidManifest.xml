@@ -21,7 +21,6 @@
         <activity android:name=".DrillsActivity" />
         <activity android:name=".ContactsActivity" />
         <activity android:name=".GoBagChecklistActivity" />
-        <activity android:name=".SettingsActivity" />
         <activity android:name=".ContactsChecklistActivity" />
         <activity android:name=".HotlinesChecklistActivity" />
         <activity android:name=".CPRActivity" />
@@ -31,7 +30,10 @@
         <activity android:name=".EarthquakeActivity" />
         <activity android:name=".FireActivity" />
         <activity android:name=".TyphoonActivity" />
-        <activity android:name=".FloodActivity"></activity>
+        <activity android:name=".FloodActivity"></activity
+        <activity android:name=".GoBagActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SOSMessageActivity"></activity>
     </application>
 
 </manifest>
