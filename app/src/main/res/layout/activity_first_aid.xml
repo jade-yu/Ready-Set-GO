@@ -15,7 +15,7 @@
             android:id="@+id/tv_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ready Set Go"
+            android:text="First Aid"
             android:textSize="20sp"
             android:gravity="center"
             android:textColor="#ffffff"
