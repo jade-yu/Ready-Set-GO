@@ -16,6 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EvacuationAreasActivity" />
+        <activity android:name=".FirstAidActivity" />
+        <activity android:name=".DrillsActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".GoBagChecklistActivity" />
+        <activity android:name=".AccountGuestActivity" />
+        <activity android:name=".AccountUserActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ContactsChecklistActivity" />
+        <activity android:name=".HotlinesChecklistActivity"></activity>
     </application>
 
 </manifest>
