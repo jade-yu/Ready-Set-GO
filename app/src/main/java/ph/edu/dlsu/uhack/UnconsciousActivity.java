@@ -1,14 +1,83 @@
 package ph.edu.dlsu.uhack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class UnconsciousActivity extends AppCompatActivity {
+
+
+    ImageButton ibBack, ibHome, ibEvac, ibBag, ibFirstaid, ibDrills, ibSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unconscious);
+
+        ibHome = findViewById(R.id.ib_home);
+        ibEvac = findViewById(R.id.ib_evac);
+        ibBag = findViewById(R.id.ib_bag);
+        ibFirstaid = findViewById(R.id.ib_firstaid);
+        ibDrills = findViewById(R.id.ib_drills);
+        ibBack = findViewById(R.id.btn_back);
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UnconsciousActivity.super.onBackPressed();
+            }
+        });
+
+
+        ibHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibEvac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), EvacuationAreasActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibBag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), GoBagActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibFirstaid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), FirstAidActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibDrills.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), DrillsActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SettingsActivity.class);
+                startActivity(i);
+            }
+        });
 
 
     }

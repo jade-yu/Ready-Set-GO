@@ -43,9 +43,6 @@
         <activity android:name=".FireActivity" />
         <activity android:name=".TyphoonActivity" />
         <activity android:name=".FloodActivity" />
-        <activity android:name=".GoBagActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".SOSMessageActivity" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

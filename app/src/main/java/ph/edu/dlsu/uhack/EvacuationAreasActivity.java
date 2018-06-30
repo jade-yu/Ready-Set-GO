@@ -1,12 +1,15 @@
 package ph.edu.dlsu.uhack;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -25,15 +28,80 @@ public class EvacuationAreasActivity extends FragmentActivity implements OnMapRe
     private GoogleMap mMap;
     private FusedLocationProviderClient client;
 
+    ImageButton ibBack, ibHome, ibEvac, ibBag, ibFirstaid, ibDrills, ibSettings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evacuation_areas);
 
-        client = LocationServices.getFusedLocationProviderClient(this);
+        //client = LocationServices.getFusedLocationProviderClient(this);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        ibHome = findViewById(R.id.ib_home);
+        ibEvac = findViewById(R.id.ib_evac);
+        ibBag = findViewById(R.id.ib_bag);
+        ibFirstaid = findViewById(R.id.ib_firstaid);
+        ibDrills = findViewById(R.id.ib_drills);
+        ibBack = findViewById(R.id.btn_back);
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EvacuationAreasActivity.super.onBackPressed();
+            }
+        });
+
+
+        ibHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibEvac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), EvacuationAreasActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibBag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), GoBagActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibFirstaid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), FirstAidActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibDrills.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), DrillsActivity.class);
+                startActivity(i);
+            }
+        });
+
+        ibSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), SettingsActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
