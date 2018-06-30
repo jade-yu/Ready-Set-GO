@@ -25,6 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".GoBagActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SOSMessageActivity"></activity>
         <activity android:name=".EvacuationAreasActivity" />
         <activity android:name=".FirstAidActivity" />
         <activity android:name=".DrillsActivity" />
