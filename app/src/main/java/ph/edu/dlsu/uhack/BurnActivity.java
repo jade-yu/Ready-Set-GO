@@ -8,8 +8,7 @@ import android.widget.ImageButton;
 
 public class BurnActivity extends AppCompatActivity {
 
-
-    ImageButton ibHome, ibEvac, ibBag, ibFirstaid, ibDrills, ibSettings;
+    ImageButton ibBack, ibHome, ibEvac, ibBag, ibFirstaid, ibDrills, ibSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +21,14 @@ public class BurnActivity extends AppCompatActivity {
         ibFirstaid = findViewById(R.id.ib_firstaid);
         ibDrills = findViewById(R.id.ib_drills);
         ibSettings = findViewById(R.id.ib_settings);
+        ibBack = findViewById(R.id.btn_back);
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BurnActivity.super.onBackPressed();
+            }
+        });
 
         ibHome.setOnClickListener(new View.OnClickListener() {
             @Override

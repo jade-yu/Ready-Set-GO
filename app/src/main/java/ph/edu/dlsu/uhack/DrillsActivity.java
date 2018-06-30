@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 public class DrillsActivity extends AppCompatActivity {
 
-    ImageButton ibTyphoon, ibFlood, ibEarthquake, ibFire, ibHome, ibEvac, ibBag, ibFirstaid, ibDrills, ibSettings;
+    ImageButton ibTyphoon, ibFlood, ibBack, ibEarthquake, ibFire, ibHome, ibEvac, ibBag, ibFirstaid, ibDrills, ibSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,14 @@ public class DrillsActivity extends AppCompatActivity {
         ibFirstaid = findViewById(R.id.ib_firstaid);
         ibDrills = findViewById(R.id.ib_drills);
         ibSettings = findViewById(R.id.ib_settings);
+        ibBack = findViewById(R.id.btn_back);
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DrillsActivity.super.onBackPressed();
+            }
+        });
 
         ibTyphoon.setOnClickListener(new View.OnClickListener() {
             @Override

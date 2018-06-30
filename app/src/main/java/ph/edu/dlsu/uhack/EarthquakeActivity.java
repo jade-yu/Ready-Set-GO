@@ -26,7 +26,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                EarthquakeActivity.super.onBackPressed();
             }
         });
         ibHome.setOnClickListener(new View.OnClickListener() {
