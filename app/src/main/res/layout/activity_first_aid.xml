@@ -115,4 +115,55 @@
 
     </GridLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#052c50"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ib_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/home"/>
+
+        <ImageButton
+            android:id="@+id/ib_evac"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/area"/>
+
+        <ImageButton
+            android:id="@+id/ib_bag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bag"/>
+
+        <ImageButton
+            android:id="@+id/ib_firstaid"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/firstaid"/>
+
+        <ImageButton
+            android:id="@+id/ib_drills"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/drills"/>
+
+        <ImageButton
+            android:id="@+id/ib_settings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/settings"/>
+    </LinearLayout>
+
 </RelativeLayout>
