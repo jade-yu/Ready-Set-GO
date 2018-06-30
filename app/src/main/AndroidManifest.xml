@@ -21,9 +21,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".EvacuationAreasActivity" />
+        <activity android:name=".FirstAidActivity" />
+        <activity android:name=".DrillsActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".GoBagChecklistActivity" />
+        <activity android:name=".ContactsChecklistActivity" />
+        <activity android:name=".HotlinesChecklistActivity" />
+        <activity android:name=".CPRActivity" />
+        <activity android:name=".BleedActivity" />
+        <activity android:name=".BurnActivity" />
+        <activity android:name=".UnconsciousActivity" />
+        <activity android:name=".EarthquakeActivity" />
+        <activity android:name=".FireActivity" />
+        <activity android:name=".TyphoonActivity" />
+        <activity android:name=".FloodActivity" />
         <activity android:name=".GoBagActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".SOSMessageActivity"></activity>
+        <activity android:name=".SOSMessageActivity" />
     </application>
 
 </manifest>
