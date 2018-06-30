@@ -47,7 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent();
                 i.setAction(Intent.ACTION_CALL);
-                i.setClass(getBaseContext(), ContactsActivity.class);
+                //i.setClass(getBaseContext(), ContactsActivity.class);
             }
         });
 
@@ -55,7 +55,9 @@ public class SettingsActivity extends AppCompatActivity {
         rlMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent();
+                i.setAction(Intent.ACTION_CALL);
+                i.setClass(getBaseContext(), SOSMessageActivity.class);
             }
         });
 
