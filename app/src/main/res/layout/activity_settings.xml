@@ -110,7 +110,6 @@
         </LinearLayout>
 
     </LinearLayout>
-</RelativeLayout>
     <Button
         android:id="@+id/btn_sos"
         android:layout_width="50dp"
