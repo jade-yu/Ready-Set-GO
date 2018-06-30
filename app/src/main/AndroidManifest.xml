@@ -29,9 +29,7 @@
         <activity android:name=".FirstAidActivity" />
         <activity android:name=".DrillsActivity" />
         <activity android:name=".ContactsActivity" />
-        <activity android:name=".GoBagChecklistActivity" />
         <activity android:name=".ContactsChecklistActivity" />
-        <activity android:name=".HotlinesChecklistActivity" />
         <activity android:name=".CPRActivity" />
         <activity android:name=".BleedActivity" />
         <activity android:name=".BurnActivity" />

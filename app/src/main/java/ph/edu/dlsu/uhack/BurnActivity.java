@@ -35,6 +35,7 @@ public class BurnActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -43,6 +44,7 @@ public class BurnActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), EvacuationAreasActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -51,6 +53,7 @@ public class BurnActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), GoBagActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -59,6 +62,7 @@ public class BurnActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), FirstAidActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -67,6 +71,7 @@ public class BurnActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), DrillsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -75,6 +80,7 @@ public class BurnActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), SettingsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 

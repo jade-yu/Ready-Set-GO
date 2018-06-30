@@ -26,6 +26,8 @@ public class FloodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FloodActivity.super.onBackPressed();
+
+                finish();
             }
         });
 
@@ -35,6 +37,7 @@ public class FloodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -43,6 +46,7 @@ public class FloodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), EvacuationAreasActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -51,6 +55,7 @@ public class FloodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), GoBagActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -59,6 +64,7 @@ public class FloodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), FirstAidActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -67,6 +73,7 @@ public class FloodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), DrillsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -75,6 +82,7 @@ public class FloodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), SettingsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }

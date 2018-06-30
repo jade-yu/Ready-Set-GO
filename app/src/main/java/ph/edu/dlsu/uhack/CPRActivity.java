@@ -26,7 +26,7 @@ public class CPRActivity extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BleedActivity.super.onBackPressed();
+                CPRActivity.super.onBackPressed();
             }
         });
 

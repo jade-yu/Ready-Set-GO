@@ -1,12 +1,6 @@
 package ph.edu.dlsu.uhack;
 
-<<<<<<< HEAD
 import android.content.Intent;
-=======
-import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.provider.ContactsContract;
->>>>>>> a8aedf004c7cb658f4f93c2251fdb780a129dd39
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -64,6 +58,7 @@ public class GoBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -72,6 +67,7 @@ public class GoBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), EvacuationAreasActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -80,6 +76,7 @@ public class GoBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), GoBagActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -88,6 +85,7 @@ public class GoBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), FirstAidActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -96,6 +94,7 @@ public class GoBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), DrillsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -104,6 +103,7 @@ public class GoBagActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), SettingsActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -137,6 +137,7 @@ public class GoBagActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 GoBagActivity.super.onBackPressed();
+                finish();
             }
         });
 
