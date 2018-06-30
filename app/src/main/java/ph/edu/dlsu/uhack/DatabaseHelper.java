@@ -19,8 +19,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static final String SCHEMA = "uhack";
     public static final int VERSION = 2;
-    public static final String SCHEMA = "contacts";
-    public static final int VERSION = 1;
 
     public DatabaseHelper(Context context) {
         super(context, SCHEMA, null, VERSION);
@@ -32,14 +30,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // It will only be called once by the system
         // -- when the schema with given name doesn't exist yet
 
-        // creates the task
-        String sql = "CREATE TABLE " + SOSMessage.TABLE_NAME + " ("
+        String sql = "CREATE TABLE " + Contact.TABLE_NAME + " ("
+                + Contact.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + Contact.COLUMN_NAME + " TEXT, "
+                + Contact.COLUMN_NUMBER + " TEXT, "
+                + Contact.COLUMN_CHECKED + " INTEGER "
+                + ");";
+        sqLiteDatabase.execSQL(sql);
+
+        addContact(sqLiteDatabase, new Contact("Vincent Tan", "09326286802"));
+        // do not close conn
+
+        //creates the MSG
+        sql = "CREATE TABLE " + SOSMessage.TABLE_NAME + " ("
                 + SOSMessage.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + SOSMessage.COLUMN_MSG + " TEXT"
                 + ");";
         sqLiteDatabase.execSQL(sql);
 
-        //creates Category
+        //creates GOBAG
         sql = "CREATE TABLE " + GoBagItems.TABLE_NAME + " ("
                 + GoBagItems.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + GoBagItems.COLUMN_WATER + " TEXT,"
@@ -52,10 +61,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + GoBagItems.COLUMN_MASK + " TEXT,"
                 + GoBagItems.COLUMN_PLASTIC + " TEXT,"
                 + GoBagItems.COLUMN_TOOLS + " TEXT,"
-                + GoBagItems.COLUMN_CAN+ " TEXT,"
+                + GoBagItems.COLUMN_CAN + " TEXT,"
                 + GoBagItems.COLUMN_MAPS + " TEXT,"
                 + GoBagItems.COLUMN_PHONES + " TEXT,"
-                + GoBagItems.COLUMN_MEDIC  + " TEXT,"
+                + GoBagItems.COLUMN_MEDIC + " TEXT,"
                 + GoBagItems.COLUMN_CASH + " TEXT,"
                 + GoBagItems.COLUMN_DOCU + " TEXT,"
                 + GoBagItems.COLUMN_BLANKET + " TEXT"
@@ -78,14 +87,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sql = "DROP TABLE IF EXISTS " + GoBagItems.TABLE_NAME + ";";
         sqLiteDatabase.execSQL(sql);
 
+        sql = "DROP TABLE IF EXISTS " + Contact.TABLE_NAME + ";";
+        sqLiteDatabase.execSQL(sql);
         // call onCreate
         onCreate(sqLiteDatabase);
     }
 
-    public String working () {
+    public String working() {
         return "connected";
     }
-    public long addMsg(SOSMessage msg){
+
+    public long addMsg(SOSMessage msg) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -99,7 +111,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-    public long addGoBag(GoBagItems bag){
+    public long addGoBag(GoBagItems bag) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -129,7 +141,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return id;
     }
-    public boolean editMsg(SOSMessage msg, long currentId){
+
+    public boolean editMsg(SOSMessage msg, long currentId) {
 
         SQLiteDatabase db = getWritableDatabase();
 
@@ -139,13 +152,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         int rowsAffected = db.update(SOSMessage.TABLE_NAME,
                 contentValues,
                 SOSMessage.COLUMN_ID + "=?",
-                new String[]{msg.getId()+""});
+                new String[]{msg.getId() + ""});
         db.close();
 
-        return rowsAffected >0;
+        return rowsAffected > 0;
     }
 
-    public boolean editGoBagItems(GoBagItems bag,long currentId){
+    public boolean editGoBagItems(GoBagItems bag, long currentId) {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -163,64 +176,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(GoBagItems.COLUMN_PHONES, bag.isPhones());
         contentValues.put(GoBagItems.COLUMN_PLASTIC, bag.isPlastic());
         contentValues.put(GoBagItems.COLUMN_RADIO, bag.isRadio());
-        contentValues.put(GoBagItems.COLUMN_TOOLS, bag.isTools() );
+        contentValues.put(GoBagItems.COLUMN_TOOLS, bag.isTools());
         contentValues.put(GoBagItems.COLUMN_WATER, bag.isWater());
-        contentValues.put(GoBagItems.COLUMN_WHISTLE, bag.isWhistle() );
+        contentValues.put(GoBagItems.COLUMN_WHISTLE, bag.isWhistle());
 
         int rowsAffected = db.update(GoBagItems.TABLE_NAME,
                 contentValues,
                 GoBagItems.COLUMN_ID + "=?",
-                new String[]{bag.getId()+""});
+                new String[]{bag.getId() + ""});
         db.close();
 
-        return rowsAffected >0;
+        return rowsAffected > 0;
     }
 
     // getMessage
-    public SOSMessage getMsg (long id){
+    public SOSMessage getMsg(long id) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.query(SOSMessage.TABLE_NAME,
                 null,
                 SOSMessage.COLUMN_ID + "=?",
-                new String[]{ id+"" },
+                new String[]{id + ""},
                 null,
                 null,
                 null);
         SOSMessage k = null;
-        if(c.moveToFirst()){
+        if (c.moveToFirst()) {
             k = new SOSMessage();
             k.setMessage(c.getString(c.getColumnIndex(SOSMessage.COLUMN_MSG)));
             k.setId(id);
-    public void onCreate(SQLiteDatabase db) {
-        // ROLE : create the tables of this schema
-        // will only be called once at the start by the system
-        // when there is no db, it is called by the system
-
-        String sql = "CREATE TABLE " + Contact.TABLE_NAME + " ("
-                + Contact.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + Contact.COLUMN_NAME + " TEXT, "
-                + Contact.COLUMN_NUMBER + " TEXT, "
-                + Contact.COLUMN_CHECKED + " INTEGER "
-                + ");";
-        db.execSQL(sql);
-
-        addContact(db, new Contact("Vincent Tan", "09326286802"));
-        // do not close conn
+        }
+        return k;
     }
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db,
-                          int i, int i1) {
-        // will only be called if there is change in version numbers
-
-        // you want to migrate to the new db
-        // drop the current tables
-        String sql = "DROP TABLE IF EXISTS " + Contact.TABLE_NAME + ";";
-        db.execSQL(sql);
-
-        // call onCreate to get the latest db design
-        onCreate(db);
-    }
 
     // add Contact
     public boolean addContact(Contact contact){
@@ -311,16 +298,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // retrieve all Contacts
-    public ArrayList<Contact> getAllContacts(){
+    public ArrayList<Contact> getAllContacts() {
         SQLiteDatabase db = getReadableDatabase();
-        Cursor c= db.query(Contact.TABLE_NAME, null,null,null,null,null,null);
+        Cursor c = db.query(Contact.TABLE_NAME, null, null, null, null, null, null);
 
         ArrayList<Contact> contacts = null;
 
-        if(c.moveToFirst()){
+        if (c.moveToFirst()) {
             do {
                 Contact contact = null;
-                String name= c.getString(c.getColumnIndex(Contact.COLUMN_NAME));
+                String name = c.getString(c.getColumnIndex(Contact.COLUMN_NAME));
                 String number = c.getString(c.getColumnIndex(Contact.COLUMN_NUMBER));
                 int checked = c.getInt(c.getColumnIndex(Contact.COLUMN_CHECKED));
                 long id = c.getLong(c.getColumnIndex(Contact.COLUMN_ID));
@@ -329,12 +316,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 contact.setNumber(number);
                 contact.setChecked(checked);
                 contact.setId(id);
-            }while(c.moveToNext());
-        return k;
+            } while (c.moveToNext());
+        }
+        return contacts;
     }
-
     // getMessage
-    public GoBagItems getBag(long id ){
+    public GoBagItems getBag(long id){
         SQLiteDatabase db = getReadableDatabase();
         Cursor c = db.query(GoBagItems.TABLE_NAME,
                 null,
@@ -366,10 +353,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             k.setWhistle(Boolean.valueOf(c.getString(c.getColumnIndex(GoBagItems.COLUMN_WHISTLE))));
             k.setId(id);
         }
-
         c.close();
         db.close();
-
         return k;
     }
 
@@ -414,9 +399,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return getReadableDatabase().query(GoBagItems.TABLE_NAME, null,null,null,null,null,null);
     }
 
-}
-        return contacts;
-    }
 
     public Cursor getAllContactsCursor(){
         SQLiteDatabase db = getReadableDatabase();

@@ -42,7 +42,7 @@
         <activity android:name=".FloodActivity" />
         <activity android:name=".GoBagActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".SOSMessageActivity"></activity>
+      //  <activity android:name=".SOSMessageActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
