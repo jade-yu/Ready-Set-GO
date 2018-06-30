@@ -1,12 +1,15 @@
 package ph.edu.dlsu.uhack;
 
 import android.content.ContentResolver;
+import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -40,7 +43,16 @@ public class ContactsActivity extends AppCompatActivity {
         rvContacts = findViewById(R.id.rv_contacts);
 
         db = new DatabaseHelper(getBaseContext());
-        loadContacts();
+
+        //one time run
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if(!prefs.getBoolean("firstTime", false)) {
+            loadContacts();
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstTime", true);
+            editor.commit();
+        }
+
         ca = new ContactsAdapter(getBaseContext(), db.getAllContactsCursor());
         rvContacts.setAdapter(ca);
 
@@ -50,9 +62,25 @@ public class ContactsActivity extends AppCompatActivity {
                 getBaseContext(), LinearLayoutManager.VERTICAL, false
         ));
 
+        ca.setOnItemClickListener(new ContactsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(long id) {
+                Contact c = db.getContact(id);
+                if(c.getChecked() == 0) {
+                    c.setChecked(1);
+                    Log.d("checked", "CHECKED SET TO ONE");
+                }
+                else {
+                    c.setChecked(0);
+                    Log.d("checked", "CHECKED SET TO ZERO");
+                }
+                db.editContact(id, c);
+            }
+        });
     }
 
     private ArrayList<Contact> loadContacts() {
+        Log.d("load", "ITS GETTING CONTACTS");
         ContentResolver contentResolver = getContentResolver();
         Cursor cursor =
                 contentResolver.query(ContactsContract.Contacts.CONTENT_URI,
@@ -92,5 +120,11 @@ public class ContactsActivity extends AppCompatActivity {
 
         //tvContacts.setText(builder.toString());
         return contacts;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ca.changeCursor(db.getAllContactsCursor());
     }
 }

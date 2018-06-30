@@ -40,11 +40,13 @@ public class ContactsAdapter extends CursorRecyclerViewAdapter<ContactsAdapter.C
         long id = cursor.getLong(cursor.getColumnIndex(Contact.COLUMN_ID));
         String name = cursor.getString(cursor.getColumnIndex(Contact.COLUMN_NAME));
         String number = cursor.getString(cursor.getColumnIndex(Contact.COLUMN_NUMBER));
+        int checked = cursor.getInt(cursor.getColumnIndex(Contact.COLUMN_CHECKED));
 
         viewHolder.tvName.setText(name);
         viewHolder.tvNumber.setText(number);
         viewHolder.itemView.setTag(id);
-
+        if(checked == 1)
+            viewHolder.cbContact.setSelected(true);
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
